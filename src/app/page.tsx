@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { PublicFooter } from "@/components/public/footer";
 import { PublicHeader } from "@/components/public/header";
+import { AvailabilityCalendar } from "@/components/public/availability-calendar";
 import { SitioGallery } from "@/components/public/sitio-gallery";
 import { CasaGallery } from "@/components/public/casa-gallery";
 import { homeContent } from "@/content/home";
@@ -119,23 +120,17 @@ export default function Home() {
         </section>
 
         <section id="disponibilidade" aria-labelledby="availability-heading" className="px-6 pb-16 sm:px-10 lg:pb-20 bg-[#f4efdf] pt-10">
-           <SectionTitle className="mb-8">
-            <span id="sitio-heading">Disponibilidade</span>
+          <SectionTitle className="mb-8">
+            <span id="availability-heading">Disponibilidade</span>
           </SectionTitle>
           <div className="mx-auto grid max-w-[1500px] items-stretch gap-8 px-6 py-16 sm:px-10 lg:grid-cols-[0.75fr_1.25fr] lg:py-20">
             <div className="flex flex-col justify-center">
-          
-              <div className="mt-6 rounded-md border border-[#e2d8bd] bg-white p-5">
-                <p className="font-ui text-[10px] font-bold uppercase tracking-[0.12em] text-[#7a806d]">Calendário ilustrativo</p>
-                <div className="mt-4 grid grid-cols-7 gap-1 text-center text-xs">
-                  {["D", "S", "T", "Q", "Q", "S", "S"].map((day, index) => (
-                    <span key={`${day}-${index}`} className="font-bold text-[#768164]">{day}</span>
-                  ))}
-                  {Array.from({ length: 35 }, (_, index) => (
-                    <span key={index} className="py-2 text-[#4d5547]">{index > 3 && index < 34 ? index - 3 : ""}</span>
-                  ))}
-                </div>
-              </div>
+              <p className="font-display max-w-lg text-[15px] leading-[1.55] text-[var(--color-body)] sm:text-[16px]">
+               Navegue pelo calendário para consultar os indicadores demonstrativos
+               de cada data. A disponibilidade deve ser confirmada diretamente
+               conosco.
+              </p>
+              <AvailabilityCalendar />
               <a
                 href="#contato"
                 className="font-ui mt-5 inline-flex min-h-12 items-center justify-center rounded-md bg-[#4f7555] px-6 py-3 text-[14px] font-bold leading-5 text-white"
@@ -156,33 +151,32 @@ export default function Home() {
         </section>
 
         <section id="localizacao" aria-labelledby="location-heading" className="px-6 pb-16 sm:px-10 lg:pb-20 pt-10">
-         <SectionTitle className="mb-8">
+          <SectionTitle className="mb-8">
             <span id="sitio-heading">Localização</span>
           </SectionTitle>
-      
           <div className="mx-auto grid max-w-[1500px] items-stretch gap-8 px-6 py-16 sm:px-10 lg:grid-cols-[0.75fr_1.25fr] lg:py-20">
             <div>
-            <h2 id="location-heading" className="font-display text-[30px] leading-[1.1] text-[var(--color-heading)] sm:text-[32px]">Localização</h2>
-            <p className="font-display mt-3 max-w-md text-[15px] leading-[1.55] text-[var(--color-body)] sm:text-[16px]">
-              Situado em meio à natureza, um espaço reservado para desacelerar e apreciar a paisagem.
-            </p>
-            <a
-              href="#contato"
-              className="font-ui mt-5 inline-flex min-h-12 items-center rounded-md bg-[#4f7555] px-6 py-3 text-[14px] font-bold leading-5 text-white"
-            >
-              Solicitar informações
-            </a>
+              <h2 id="location-heading" className="font-display text-[30px] leading-[1.1] text-[var(--color-heading)] sm:text-[32px]">Localização</h2>
+              <p className="font-display mt-3 max-w-md text-[15px] leading-[1.55] text-[var(--color-body)] sm:text-[16px]">
+                Situado em meio à natureza, um espaço reservado para desacelerar e apreciar a paisagem.
+              </p>
+              <a
+                href="#contato"
+                className="font-ui mt-5 inline-flex min-h-12 items-center rounded-md bg-[#4f7555] px-6 py-3 text-[14px] font-bold leading-5 text-white"
+              >
+                Solicitar informações
+              </a>
+            </div>
+            <div className="relative h-[280px] overflow-hidden rounded-md sm:h-[360px]">
+              <Image
+                src="/images/location.jpg"
+                alt="Vista natural ao redor da propriedade"
+                fill
+                sizes="(max-width: 1024px) 100vw, 60vw"
+                className="object-cover"
+              />
+            </div>
           </div>
-          <div className="relative h-[280px] overflow-hidden rounded-md sm:h-[360px]">
-            <Image
-              src="/images/location.jpg"
-              alt="Vista natural ao redor da propriedade"
-              fill
-              sizes="(max-width: 1024px) 100vw, 60vw"
-              className="object-cover"
-            />
-          </div>
-                    </div>
 
         </section>
 
