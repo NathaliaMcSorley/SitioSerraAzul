@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { MobileNav } from "./mobile-nav";
+import { publicAsset } from "@/lib/public-asset";
 
 const navigation = [
   { label: "A Experiência", href: "#experiencia" },
@@ -19,7 +20,7 @@ export function PublicHeader() {
           aria-label="Sítio Serra Azul - início"
         >
           <Image
-            src="/images/logo-transparent.png"
+            src={publicAsset("/images/logo-transparent.png")}
             alt="Sítio Serra Azul"
             width={220}
             height={86}

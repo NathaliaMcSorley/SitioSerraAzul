@@ -6,6 +6,7 @@ import { AvailabilityCalendar } from "@/components/public/availability-calendar"
 import { SitioGallery } from "@/components/public/sitio-gallery";
 import { CasaGallery } from "@/components/public/casa-gallery";
 import { homeContent } from "@/content/home";
+import { publicAsset } from "@/lib/public-asset";
 
 function SectionTitle({
   children,
@@ -34,7 +35,7 @@ export default function Home() {
           className="relative flex min-h-[560px] items-center overflow-hidden sm:min-h-[600px]"
         >
           <Image
-            src="/images/hd-photo-2-overview.png"
+            src={publicAsset("/images/hd-photo-2-overview.png")}
             alt="Paisagem natural das montanhas e lago do Sítio Serra Azul"
             fill
             priority
@@ -95,7 +96,7 @@ export default function Home() {
             </div>
             <div className="relative h-[280px] overflow-hidden rounded-[52px_8px_52px_8px] sm:h-[360px]">
               <Image
-                src="/images/experience1.jpg"
+                src={publicAsset("/images/experience1.jpg")}
                 alt="Varanda ampla com redes e área para descanso"
                 fill
                 sizes="(max-width: 1024px) 100vw, 58vw"
@@ -140,7 +141,7 @@ export default function Home() {
             </div>
             <div className="relative min-h-[300px] overflow-hidden rounded-md sm:min-h-[400px]">
               <Image
-                src="/images/availability.jpg"
+                src={publicAsset("/images/availability.jpg")}
                 alt="Paisagem do lago e das colinas ao redor do sítio"
                 fill
                 sizes="(max-width: 1024px) 100vw, 60vw"
@@ -169,7 +170,7 @@ export default function Home() {
             </div>
             <div className="relative h-[280px] overflow-hidden rounded-md sm:h-[360px]">
               <Image
-                src="/images/location.jpg"
+                src={publicAsset("/images/location.jpg")}
                 alt="Vista natural ao redor da propriedade"
                 fill
                 sizes="(max-width: 1024px) 100vw, 60vw"
@@ -218,7 +219,7 @@ export default function Home() {
             </div>
             <div className="relative min-h-[280px] sm:min-h-[350px]">
               <Image
-                src="/images/cta.jpg"
+                src={publicAsset("/images/cta.jpg")}
                 alt="Varanda do sítio rodeada pela natureza"
                 fill
                 sizes="(max-width: 1024px) 100vw, 58vw"

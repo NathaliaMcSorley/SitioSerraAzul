@@ -27,6 +27,14 @@ Open http://localhost:3000.
 
 The welcome page does not require a database or authentication credentials.
 
+## Deploy to GitHub Pages
+
+The public site is exported as static files and deployed by GitHub Actions when changes reach `main`. After merging your changes to `main`, open the repository's **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**. The first successful workflow publishes the site at:
+
+https://nathaliamcsorley.github.io/SitioSerraAzul/
+
+Open that URL on your phone to access the site. GitHub Pages serves static files only; database, authentication, and other server-side features need a separate hosting service.
+
 ## Public homepage
 
 The public homepage at `/` is a static Feature 2 implementation based on `docs/mockup/oficial_mockup.JPG`. The official `docs/mockup/logo.JPG` is used for the logo, and local property imagery is selected from `docs/mockup/images/`. No database or authentication is required.

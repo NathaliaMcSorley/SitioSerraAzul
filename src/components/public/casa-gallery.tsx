@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { publicAsset } from "@/lib/public-asset";
 
 type CasaPhoto = {
   src: string;
@@ -85,7 +86,7 @@ export function CasaGallery() {
             }}
           >
             <Image
-              src={photo.src}
+              src={publicAsset(photo.src)}
               alt={photo.alt}
               width={photo.width}
               height={photo.height}
@@ -126,7 +127,7 @@ export function CasaGallery() {
               <span aria-hidden="true">&times;</span>
             </button>
             <Image
-              src={selectedPhoto.src}
+              src={publicAsset(selectedPhoto.src)}
               alt={selectedPhoto.alt}
               width={selectedPhoto.width}
               height={selectedPhoto.height}
