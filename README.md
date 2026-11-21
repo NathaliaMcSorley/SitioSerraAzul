@@ -29,7 +29,9 @@ The welcome page does not require a database or authentication credentials.
 
 ## Public homepage
 
-The public homepage at `/` is an intentionally static Feature 1 implementation. Property photography is extracted from the approved mockups in `docs/mockup/` for local presentation. The owner should verify and replace those assets and the general experience highlights in `src/content/home.ts` before production if approved property-specific details become available.
+The public homepage at `/` is a static Feature 2 implementation based on `docs/mockup/oficial_mockup.JPG`. The official `docs/mockup/logo.JPG` is used for the logo, and local property imagery is selected from `docs/mockup/images/`. No database or authentication is required.
+
+The availability section is a clearly labeled visual placeholder. It does not calculate or confirm availability. Property-specific copy and confirmed contact details should be verified before production.
 
 ## Environment configuration
 

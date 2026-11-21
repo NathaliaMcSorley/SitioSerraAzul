@@ -1,17 +1,22 @@
-import { homeContent } from "@/content/home";
-
 export function PublicFooter() {
   return (
-    <footer className="border-t border-stone-200 bg-[#f8f6ef]">
-      <div className="mx-auto flex max-w-[1500px] flex-col gap-5 px-6 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-10">
-        <p className="font-serif text-sm tracking-[0.12em] text-[#273d4c]">
-          {homeContent.brand}
+    <footer className="bg-[#3f4b32] text-[#f7f1df]">
+      <div className="mx-auto max-w-[1500px] px-6 py-10 sm:px-10">
+        <div className="flex flex-col items-center justify-between gap-6 border-b border-white/20 pb-7 text-center md:flex-row md:text-left">
+          <p className="font-serif text-2xl italic">Sítio Serra Azul</p>
+          <nav aria-label="Footer navigation" className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-xs">
+            <a className="hover:underline" href="#home">Home</a>
+            <a className="hover:underline" href="#experiencia">Experiência</a>
+            <a className="hover:underline" href="#comodidades">Comodidades</a>
+            <a className="hover:underline" href="#galeria">Galeria</a>
+            <a className="hover:underline" href="#acomodacoes">Acomodações</a>
+            <a className="hover:underline" href="#localizacao">Localização</a>
+            <a className="hover:underline" href="#contato">Contato</a>
+          </nav>
+        </div>
+        <p className="pt-5 text-center text-[11px] text-white/65">
+          © Sítio Serra Azul. Todos os direitos reservados.
         </p>
-        <nav aria-label="Footer navigation" className="flex gap-6 text-sm text-stone-600">
-          <a className="hover:text-[#273d4c]" href="#home">Home</a>
-          <a className="hover:text-[#273d4c]" href="#gallery">Gallery</a>
-          <a className="hover:text-[#273d4c]" href="#amenities">Amenities</a>
-        </nav>
       </div>
     </footer>
   );

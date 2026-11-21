@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "The Farmhouse | Country Retreat",
-  description: "A welcoming countryside farmhouse rental experience.",
+  title: "Sítio Serra Azul",
+  description: "Paz, natureza e momentos em família no campo.",
 };
 
 export default function RootLayout({

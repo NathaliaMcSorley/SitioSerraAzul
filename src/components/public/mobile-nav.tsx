@@ -4,9 +4,13 @@ import { useState } from "react";
 
 const navigation = [
   { label: "Home", href: "#home" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Amenities", href: "#amenities" },
-  { label: "Explore", href: "#property" },
+  { label: "Experiência", href: "#experiencia" },
+  { label: "Comodidades", href: "#comodidades" },
+  { label: "Galeria", href: "#galeria" },
+  { label: "Acomodações", href: "#acomodacoes" },
+  { label: "Disponibilidade", href: "#disponibilidade" },
+  { label: "Localização", href: "#localizacao" },
+  { label: "Contato", href: "#contato" },
 ];
 
 export function MobileNav() {

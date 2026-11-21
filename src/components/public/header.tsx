@@ -1,43 +1,41 @@
+import Image from "next/image";
 import { MobileNav } from "./mobile-nav";
-import { homeContent } from "@/content/home";
 
 const navigation = [
-  { label: "The Farmhouse", href: "#home" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Amenities", href: "#amenities" },
-  { label: "Explore", href: "#property" },
+  { label: "Home", href: "#home" },
+  { label: "Experiência na Fazenda", href: "#experiencia" },
+  { label: "Comodidades", href: "#comodidades" },
+  { label: "Galeria", href: "#galeria" },
+  { label: "Acomodações", href: "#acomodacoes" },
+  { label: "Disponibilidade", href: "#disponibilidade" },
+  { label: "Localização", href: "#localizacao" },
 ];
 
 export function PublicHeader() {
   return (
-    <header className="relative z-30 h-[68px] bg-[#fdfcf8]">
+    <header className="relative z-30 h-[84px] border-b border-white/30 bg-[#fbf8ef]/95">
       <div className="mx-auto flex h-full max-w-[1500px] items-center justify-between px-5 sm:px-8">
         <a
           href="#home"
-          className="flex items-center gap-3 text-[#273d4c]"
-          aria-label={`${homeContent.brand} home`}
+          className="flex items-center"
+          aria-label="Sítio Serra Azul - início"
         >
-          <svg
-            aria-hidden="true"
-            viewBox="0 0 48 48"
-            className="h-9 w-9 text-[#758c67]"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-          >
-            <path d="M24 43V18M24 24c-8-1-12-7-12-14 8 1 12 6 12 14ZM24 31c8-1 12-7 12-14-8 1-12 6-12 14ZM24 18c5-3 7-7 6-12-5 2-7 6-6 12Z" />
-          </svg>
-          <span className="font-serif text-lg tracking-[0.14em] sm:text-xl">
-            {homeContent.brand}
-          </span>
+          <Image
+            src="/images/logo.png"
+            alt="Sítio Serra Azul"
+            width={220}
+            height={86}
+            priority
+            className="h-[68px] w-auto object-contain"
+          />
         </a>
 
-        <nav aria-label="Primary navigation" className="hidden items-center gap-9 md:flex">
+        <nav aria-label="Primary navigation" className="hidden items-center gap-5 xl:flex">
           {navigation.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-[#273d4c] transition-colors hover:text-[#5e7f96]"
+              className="text-xs font-medium text-[#26382a] transition-colors hover:text-[#9b5b32]"
             >
               {item.label}
             </a>
@@ -45,10 +43,10 @@ export function PublicHeader() {
         </nav>
 
         <a
-          href="#property"
-          className="hidden rounded-md bg-[#5f7f98] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#4f6d82] md:inline-flex"
+          href="#contato"
+          className="hidden shrink-0 rounded-md bg-[#b86f36] px-4 py-3 text-xs font-bold text-white shadow-sm transition-colors hover:bg-[#965a2c] md:inline-flex"
         >
-          Explore the Farmhouse
+          Planejar estadia
         </a>
         <MobileNav />
       </div>

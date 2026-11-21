@@ -3,31 +3,22 @@ export type HomeHighlight = {
   description: string;
 };
 
-// Owner-to-verify: these highlights describe the intended experience,
-// not confirmed property amenities or facilities.
 export const homeContent = {
-  brand: "THE FARMHOUSE",
-  headline: "Find Your Place in the Country",
+  brand: "Sítio Serra Azul",
+  headline: "Escape para o Campo",
   introduction:
-    "Slow mornings, open skies, and room to reconnect.",
+    "Desfrute de natureza, paisagens tranquilas, churrasco, pescaria e momentos de paz da vida rural.",
   description:
-    "Escape to a charming farmhouse where rustic comfort meets natural beauty.",
-  property:
-    "A farmhouse stay, made for slowing down",
+    "Respire ar puro, relaxe em redes, aproveite um churrasco com família e conecte-se com a natureza.",
+  property: "Experiência na Fazenda",
   propertyDescription:
-    "Enjoy an inviting setting shaped around comfort, quiet moments, and a closer connection to the countryside.",
+    "Relaxe por puro, relaxe em rede, aprecie um churrasco com família e conecte-se com a natureza.",
   highlights: [
-    {
-      title: "Comfort",
-      description: "A warm, welcoming place to settle in and feel at ease.",
-    },
-    {
-      title: "Nature",
-      description: "Space to enjoy the changing light and open country surroundings.",
-    },
-    {
-      title: "Togetherness",
-      description: "Unhurried moments for sharing good company and simple pleasures.",
-    },
+    { title: "Lago para Pesca", description: "Lago para momentos tranquilos." },
+    { title: "Churrasqueira", description: "Espaço para reunir a família." },
+    { title: "Redes", description: "Descanso à sombra da natureza." },
+    { title: "Cozinha Equipada", description: "Estrutura para preparar refeições." },
+    { title: "Estacionamento", description: "Acesso facilitado ao sítio." },
+    { title: "Área Externa", description: "Mais espaço ao ar livre." },
   ] satisfies HomeHighlight[],
 };
