@@ -27,6 +27,10 @@ Open http://localhost:3000.
 
 The welcome page does not require a database or authentication credentials.
 
+## Public homepage
+
+The public homepage at `/` is an intentionally static Feature 1 implementation. Property photography is extracted from the approved mockups in `docs/mockup/` for local presentation. The owner should verify and replace those assets and the general experience highlights in `src/content/home.ts` before production if approved property-specific details become available.
+
 ## Environment configuration
 
 Copy the example file for optional local configuration:
