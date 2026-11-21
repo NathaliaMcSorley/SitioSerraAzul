@@ -1,94 +1,135 @@
-# Vacation Farmhouse Rental Platform
+# Sítio Serra Azul
 
-This repository contains the Feature 0 Next.js bootstrap for the Vacation Farmhouse Rental Platform. It provides a minimal welcome page and the local foundation for future public and administration features.
+A static, responsive public website for the Sítio Serra Azul vacation property. The current implementation presents the property, its experience and accommodations, photo galleries, and demonstrative availability through a single Next.js page.
+
+## Current implementation status
+
+Implemented:
+
+- Desktop and mobile responsive public navigation.
+- Hero and property overview through [src/app/page.tsx](src/app/page.tsx).
+- "A Experiência" and "O Sítio" sections.
+- "A Casa" photo gallery.
+- A month-navigation availability calendar with clearly labeled sample data.
+- Localização, FAQ, and Contato sections already present in the current homepage.
+- Static image assets and responsive lightboxes.
+- Unit/component tests and Chromium end-to-end coverage.
+
+Not implemented:
+
+- Real availability or reservation data.
+- Reservation inquiry submission or confirmation.
+- Authentication or an administration portal.
+- Database-backed property, booking, pricing, or inquiry functionality.
+
+Prisma and Auth.js dependencies/configuration are present as foundation only. The Prisma schema has no domain models, and Auth.js has no providers.
+
+## Technology and architecture
+
+- Next.js 16 App Router with React 19 and strict TypeScript.
+- Static export configured by [next.config.ts](next.config.ts).
+- Tailwind CSS 4 utilities and shared CSS variables in [src/app/globals.css](src/app/globals.css).
+- Component and page content under [src](src).
+- Vitest, Testing Library, jsdom, ESLint, and Playwright for validation.
+- The deployed public page is an indexable static export in `out/`; no application server or database is required.
+
+See [docs/architecture.md](docs/architecture.md) for the current structure and conventions.
+
+## Implemented homepage sections
+
+The homepage is implemented in [src/app/page.tsx](src/app/page.tsx). The implemented sections up through and including Disponibilidade are:
+
+- **A Experiência:** introductory copy and property highlights.
+- **O Sítio:** eight-photo responsive gallery with keyboard-accessible lightbox.
+- **A Casa:** responsive accommodation photo gallery with lightbox.
+- **Disponibilidade:** an interactive calendar. Dates are sample indicators: available and unavailable status is not sourced from a live schedule.
+
+The page also currently includes Localização, FAQ, and Contato. These remain static content and do not submit or confirm reservations.
+
+## Project structure
+
+```text
+.
+├── .github/workflows/      # GitHub Actions deployment workflow
+├── docs/                   # Architecture and SDLC documentation
+│   └── mockup/             # Approved mockup and logo references
+├── public/images/          # Website static images
+├── src/
+│   ├── app/                # App Router layout, homepage, and tests
+│   ├── components/public/  # Header, navigation, galleries, calendar, footer
+│   ├── content/            # Static homepage and availability content
+│   └── lib/                # Pure calendar, asset, and utility helpers
+├── e2e/                    # Playwright browser tests
+├── prisma/schema.prisma    # Database bootstrap; no domain models yet
+├── package.json            # Dependencies and npm scripts
+└── next.config.ts          # Static export and base-path configuration
+```
+
+Design references:
+
+- [docs/mockup/official_mockup.jpg](docs/mockup/official_mockup.jpg)
+- [docs/mockup/logo.png](docs/mockup/logo.png)
 
 ## Prerequisites
 
-- Node.js 24 LTS (recommended) or another supported Node.js 20+ release
-- npm 11 or another npm version compatible with Node.js
-- Optional: PostgreSQL 16+ for later database work
-- Optional: Docker only if you prefer running PostgreSQL in a container
+- Node.js 24, matching the deployment workflow.
+- npm (the repository includes `package-lock.json`; use `npm ci` for a reproducible install).
+- No database or authentication service is required for the current website.
 
-## Install
+Optional environment placeholders are listed in [.env.example](.env.example). PostgreSQL 16+ and Prisma are not required until database-backed functionality is implemented.
 
-```powershell
-npm install
-```
+## Installation and local development
 
-The dependency versions and lockfile are recorded in `package.json` and `package-lock.json`.
-
-## Local development
+From the repository root:
 
 ```powershell
+npm ci
 npm run dev
 ```
 
-Open http://localhost:3000.
-
-The welcome page does not require a database or authentication credentials.
-
-## Deploy to GitHub Pages
-
-The public site is exported as static files and deployed by GitHub Actions when changes reach `main`. Before the first deployment, open the repository's **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**. Then merge your changes to `main`; the first successful workflow publishes the site at:
-
-https://nathaliamcsorley.github.io/SitioSerraAzul/
-
-Open that URL on your phone to access the site. GitHub Pages serves static files only; database, authentication, and other server-side features need a separate hosting service.
-
-## Public homepage
-
-The public homepage at `/` is a static Feature 2 implementation based on `docs/mockup/oficial_mockup.JPG`. The official `docs/mockup/logo.JPG` is used for the logo, and local property imagery is selected from `docs/mockup/images/`. No database or authentication is required.
-
-The availability section is a clearly labeled visual placeholder. It does not calculate or confirm availability. Property-specific copy and confirmed contact details should be verified before production.
+Open `http://localhost:3000`.
 
 ## Environment configuration
 
-Copy the example file for optional local configuration:
+Copy the example only if work requires the optional variables:
 
 ```powershell
 Copy-Item .env.example .env
 ```
 
-Set `DATABASE_URL` only when working with Prisma/PostgreSQL. `AUTH_SECRET` is optional until Auth.js authentication is implemented. Placeholder values are not real credentials.
+- `DATABASE_URL`: placeholder PostgreSQL connection string for future Prisma work.
+- `AUTH_SECRET`: placeholder for future Auth.js setup.
+- `NEXT_PUBLIC_BASE_PATH`: optional base path for static hosting. It is empty for local development and set to `/SitioSerraAzul` by the GitHub Actions build.
 
-## PostgreSQL and Prisma
+Do not place real credentials in source control or in committed documentation.
 
-PostgreSQL is not required to start or build the welcome page. Use one of these local options:
-
-1. Install PostgreSQL locally and create a development database.
-2. Run PostgreSQL through Docker Compose when Docker is available.
-
-Set `DATABASE_URL` in `.env`, for example:
-
-```text
-postgresql://postgres:password@localhost:5432/sitio_serra_azul
-```
-
-Generate or apply migrations when domain models are added:
+## Validation and build commands
 
 ```powershell
-npx prisma generate
-npx prisma migrate dev
+npm run lint       # ESLint
+npm run typecheck  # TypeScript --noEmit
+npm run test       # Vitest and Testing Library
+npm run test:watch # Vitest watch mode
+npm run build      # Next.js production/static build; writes to out/
+npm run start      # Serve a Next.js production build
 ```
 
-Before running Prisma commands, replace the example credentials with your local database credentials.
-
-## Scripts
-
-```powershell
-npm run dev          # start the development server
-npm run build        # create a production build
-npm run start        # serve the production build
-npm run lint         # run ESLint
-npm run typecheck    # run TypeScript type checking
-npm run test         # run Vitest and React Testing Library
-npm run test:watch   # run unit/component tests in watch mode
-npm run test:e2e     # run the Playwright smoke test
-```
-
-Install the Playwright browser before the first end-to-end run:
+For the first Playwright run:
 
 ```powershell
 npx playwright install chromium
 npm run test:e2e
 ```
+
+## Build and deployment
+
+The [.github/workflows/deploy.yml](.github/workflows/deploy.yml) workflow is the repository's verified deployment configuration.
+
+- Triggers on pushes to `main` and on manual `workflow_dispatch`.
+- Runs on Ubuntu with Node.js 24 and `npm ci`.
+- Builds with `NEXT_PUBLIC_BASE_PATH=/SitioSerraAzul`.
+- Does not run lint, typecheck, unit tests, or Playwright in the workflow: it runs only `npm run build`.
+- Uploads `./out` as the GitHub Pages artifact and deploys it through the `github-pages` environment.
+- The verified target convention is `https://nathaliamcsorley.github.io/SitioSerraAzul/`.
+
+The workflow declares no custom repository secrets. It does not document whether the GitHub Pages source setting is currently enabled in repository settings. That setting, any organization-level restrictions, a custom domain, and DNS configuration are **unknown and should be confirmed in GitHub before relying on deployment**. No database or server-side application host is configured by this repository.
