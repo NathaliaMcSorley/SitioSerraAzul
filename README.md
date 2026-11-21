@@ -29,7 +29,7 @@ The welcome page does not require a database or authentication credentials.
 
 ## Deploy to GitHub Pages
 
-The public site is exported as static files and deployed by GitHub Actions when changes reach `main`. After merging your changes to `main`, open the repository's **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**. The first successful workflow publishes the site at:
+The public site is exported as static files and deployed by GitHub Actions when changes reach `main`. Before the first deployment, open the repository's **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**. Then merge your changes to `main`; the first successful workflow publishes the site at:
 
 https://nathaliamcsorley.github.io/SitioSerraAzul/
 
