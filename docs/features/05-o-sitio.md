@@ -12,10 +12,10 @@ Replace the existing generic gallery presentation with a responsive exterior-pho
 
 ## Source References
 
-- Exterior images: [public/images](../public/images)
-- Mockup assets: [docs/mockup](../docs/mockup)
-- Homepage section: [src/app/page.tsx](../src/app/page.tsx)
-- Gallery implementation: [src/components/public/sitio-gallery.tsx](../src/components/public/sitio-gallery.tsx)
+- Exterior images: [public/images](../../public/images)
+- Mockup assets: [docs/mockup](../../docs/mockup)
+- Homepage section: [src/app/page.tsx](../../src/app/page.tsx)
+- Gallery implementation: [src/components/public/sitio-gallery.tsx](../../src/components/public/sitio-gallery.tsx)
 
 ## Scope
 
@@ -40,8 +40,8 @@ Replace the existing generic gallery presentation with a responsive exterior-pho
 
 ### Main files
 
-- [src/components/public/sitio-gallery.tsx](../src/components/public/sitio-gallery.tsx): photo data, grid, dialog, focus, and backdrop behavior.
-- [src/app/page.tsx](../src/app/page.tsx): section container and `#comodidades` anchor.
+- [src/components/public/sitio-gallery.tsx](../../src/components/public/sitio-gallery.tsx): photo data, grid, dialog, focus, and backdrop behavior.
+- [src/app/page.tsx](../../src/app/page.tsx): section container and `#comodidades` anchor.
 
 ### Images
 
@@ -68,7 +68,7 @@ The gallery uses:
 
 ## Verification
 
-[e2e/home.spec.ts](../e2e/home.spec.ts) covers photo loading, lightbox open/close behavior, focus restoration, backdrop dismissal, touch interaction, and image viewport fit.
+[e2e/home.spec.ts](../../e2e/home.spec.ts) covers photo loading, lightbox open/close behavior, focus restoration, backdrop dismissal, touch interaction, and image viewport fit.
 
 ## Implementation Notes
 

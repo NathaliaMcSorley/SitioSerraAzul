@@ -12,9 +12,9 @@ Present the property's main value proposition and summarize the outdoor experien
 
 ## Source References
 
-- Official mockup: [docs/mockup/official_mockup.jpg](../docs/mockup/official_mockup.jpg)
-- Homepage implementation: [src/app/page.tsx](../src/app/page.tsx)
-- Static content: [src/content/home.ts](../src/content/home.ts)
+- Official mockup: [docs/mockup/official_mockup.jpg](../../docs/mockup/official_mockup.jpg)
+- Homepage implementation: [src/app/page.tsx](../../src/app/page.tsx)
+- Static content: [src/content/home.ts](../../src/content/home.ts)
 
 ## Scope
 
@@ -36,9 +36,9 @@ Present the property's main value proposition and summarize the outdoor experien
 
 ### Main files
 
-- [src/app/page.tsx](../src/app/page.tsx): section markup and responsive layout.
-- [src/content/home.ts](../src/content/home.ts): property headline and description.
-- [public/images/experience1.jpg](../public/images/experience1.jpg): experience photography.
+- [src/app/page.tsx](../../src/app/page.tsx): section markup and responsive layout.
+- [src/content/home.ts](../../src/content/home.ts): property headline and description.
+- [public/images/experience1.jpg](../../public/images/experience1.jpg): experience photography.
 
 ### Behavior
 

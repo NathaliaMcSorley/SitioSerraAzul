@@ -14,8 +14,8 @@ Briefly describe the user-facing and technical goal.
 
 - Feature specification: [path or link]
 - Mockup/design: [path or link]
-- Architecture: [docs/architecture.md](../docs/architecture.md)
-- Relevant instructions: [AGENTS.md](../AGENTS.md)
+- Architecture: [docs/architecture.md](../../docs/architecture.md)
+- Relevant instructions: [AGENTS.md](../../AGENTS.md)
 
 ## Scope
 

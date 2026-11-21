@@ -12,9 +12,9 @@ Present the property's interior and accommodation areas with responsive photogra
 
 ## Source References
 
-- Official mockup: [docs/mockup/official_mockup.jpg](../docs/mockup/official_mockup.jpg)
-- Homepage implementation: [src/app/page.tsx](../src/app/page.tsx)
-- Gallery implementation: [src/components/public/casa-gallery.tsx](../src/components/public/casa-gallery.tsx)
+- Official mockup: [docs/mockup/official_mockup.jpg](../../docs/mockup/official_mockup.jpg)
+- Homepage implementation: [src/app/page.tsx](../../src/app/page.tsx)
+- Gallery implementation: [src/components/public/casa-gallery.tsx](../../src/components/public/casa-gallery.tsx)
 
 ## Scope
 
@@ -36,8 +36,8 @@ Present the property's interior and accommodation areas with responsive photogra
 
 ### Main files
 
-- [src/components/public/casa-gallery.tsx](../src/components/public/casa-gallery.tsx): accommodation photo data and lightbox behavior.
-- [src/app/page.tsx](../src/app/page.tsx): section title and layout.
+- [src/components/public/casa-gallery.tsx](../../src/components/public/casa-gallery.tsx): accommodation photo data and lightbox behavior.
+- [src/app/page.tsx](../../src/app/page.tsx): section title and layout.
 
 ### Images
 
@@ -60,7 +60,7 @@ Additional bedroom images exist in `public/images` but are not currently selecte
 
 ## Verification
 
-Lightbox behavior is shared with the same pattern as the O Sítio gallery and is exercised by the Playwright lightbox tests in [e2e/home.spec.ts](../e2e/home.spec.ts).
+Lightbox behavior is shared with the same pattern as the O Sítio gallery and is exercised by the Playwright lightbox tests in [e2e/home.spec.ts](../../e2e/home.spec.ts).
 
 ## Implementation Notes
 

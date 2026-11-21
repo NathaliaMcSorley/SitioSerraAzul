@@ -8,14 +8,14 @@
 
 ## Objective
 
-Establish a maintainable Next.js foundation for the Sítio Serra Azul public website and later project capabilities without implementing speculative domain or booking functionality.
+Establish a maintainable Next.js foundation for the Sítio Serra Azul public website.
 
 ## Source References
 
-- Project instructions: [AGENTS.md](../AGENTS.md)
-- Architecture: [docs/architecture.md](../docs/architecture.md)
-- Package manifest: [package.json](../package.json)
-- Environment example: [.env.example](../.env.example)
+- Project instructions: [AGENTS.md](../../AGENTS.md)
+- Architecture: [docs/architecture.md](../../docs/architecture.md)
+- Package manifest: [package.json](../../package.json)
+- Environment example: [.env.example](../../.env.example)
 
 ## Scope
 
@@ -39,14 +39,14 @@ Establish a maintainable Next.js foundation for the Sítio Serra Azul public web
 
 ### Main files
 
-- [package.json](../package.json): dependencies and npm scripts.
-- [next.config.ts](../next.config.ts): static export configuration.
-- [tsconfig.json](../tsconfig.json): strict TypeScript settings and `@/` alias.
-- [src/app/layout.tsx](../src/app/layout.tsx): root layout and metadata.
-- [src/app/globals.css](../src/app/globals.css): global styles.
-- [prisma/schema.prisma](../prisma/schema.prisma): PostgreSQL datasource bootstrap with no domain models.
-- [src/auth.ts](../src/auth.ts): Auth.js foundation with no providers.
-- [vitest.config.ts](../vitest.config.ts) and [playwright.config.ts](../playwright.config.ts): test configuration.
+- [package.json](../../package.json): dependencies and npm scripts.
+- [next.config.ts](../../next.config.ts): static export configuration.
+- [tsconfig.json](../../tsconfig.json): strict TypeScript settings and `@/` alias.
+- [src/app/layout.tsx](../../src/app/layout.tsx): root layout and metadata.
+- [src/app/globals.css](../../src/app/globals.css): global styles.
+- [prisma/schema.prisma](../../prisma/schema.prisma): PostgreSQL datasource bootstrap with no domain models.
+- [src/auth.ts](../../src/auth.ts): Auth.js foundation with no providers.
+- [vitest.config.ts](../../vitest.config.ts) and [playwright.config.ts](../../playwright.config.ts): test configuration.
 
 ## Acceptance Criteria
 

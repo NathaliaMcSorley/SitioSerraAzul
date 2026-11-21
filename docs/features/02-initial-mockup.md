@@ -12,10 +12,10 @@ Create the initial customer-facing homepage shell by translating the official mo
 
 ## Source References
 
-- Official mockup: [docs/mockup/official_mockup.jpg](../docs/mockup/official_mockup.jpg)
-- Official logo: [docs/mockup/logo.png](../docs/mockup/logo.png)
-- Property images: [public/images](../public/images)
-- Architecture: [docs/architecture.md](../docs/architecture.md)
+- Official mockup: [docs/mockup/official_mockup.jpg](../../docs/mockup/official_mockup.jpg)
+- Official logo: [docs/mockup/logo.png](../../docs/mockup/logo.png)
+- Property images: [public/images](../../public/images)
+- Architecture: [docs/architecture.md](../../docs/architecture.md)
 
 ## Scope
 
@@ -39,12 +39,12 @@ Create the initial customer-facing homepage shell by translating the official mo
 
 ### Main files
 
-- [src/app/page.tsx](../src/app/page.tsx): homepage section composition.
-- [src/app/globals.css](../src/app/globals.css): design tokens and base typography.
-- [src/content/home.ts](../src/content/home.ts): static homepage content.
-- [src/components/public/header.tsx](../src/components/public/header.tsx): public navigation.
-- [src/components/public/footer.tsx](../src/components/public/footer.tsx): footer navigation.
-- [src/lib/public-asset.ts](../src/lib/public-asset.ts): base-path-aware static asset paths.
+- [src/app/page.tsx](../../src/app/page.tsx): homepage section composition.
+- [src/app/globals.css](../../src/app/globals.css): design tokens and base typography.
+- [src/content/home.ts](../../src/content/home.ts): static homepage content.
+- [src/components/public/header.tsx](../../src/components/public/header.tsx): public navigation.
+- [src/components/public/footer.tsx](../../src/components/public/footer.tsx): footer navigation.
+- [src/lib/public-asset.ts](../../src/lib/public-asset.ts): base-path-aware static asset paths.
 
 ### Implemented sections
 
@@ -60,8 +60,8 @@ The initial mockup pass established Hero, A Experiência, O Sítio, A Casa, Disp
 
 ## Verification
 
-- Homepage rendering is covered in [src/app/page.test.tsx](../src/app/page.test.tsx).
-- Responsive page behavior is covered in [e2e/home.spec.ts](../e2e/home.spec.ts).
+- Homepage rendering is covered in [src/app/page.test.tsx](../../src/app/page.test.tsx).
+- Responsive page behavior is covered in [e2e/home.spec.ts](../../e2e/home.spec.ts).
 - Static export and asset path behavior were verified with `npm run build`.
 
 ## Implementation Notes

@@ -12,9 +12,9 @@ Provide clear desktop and mobile navigation, a recognizable property header, and
 
 ## Source References
 
-- Official mockup: [docs/mockup/official_mockup.jpg](../docs/mockup/official_mockup.jpg)
-- Homepage implementation: [src/app/page.tsx](../src/app/page.tsx)
-- Header implementation: [src/components/public/header.tsx](../src/components/public/header.tsx)
+- Official mockup: [docs/mockup/official_mockup.jpg](../../docs/mockup/official_mockup.jpg)
+- Homepage implementation: [src/app/page.tsx](../../src/app/page.tsx)
+- Header implementation: [src/components/public/header.tsx](../../src/components/public/header.tsx)
 
 ## Scope
 
@@ -38,11 +38,11 @@ Provide clear desktop and mobile navigation, a recognizable property header, and
 
 ### Main files
 
-- [src/components/public/header.tsx](../src/components/public/header.tsx): logo, desktop navigation, and reserving CTA.
-- [src/components/public/mobile-nav.tsx](../src/components/public/mobile-nav.tsx): mobile menu state and navigation.
-- [src/app/page.tsx](../src/app/page.tsx): hero section and calls to action.
-- [src/content/home.ts](../src/content/home.ts): hero headline and introduction.
-- [src/app/globals.css](../src/app/globals.css): focus and shared typography styles.
+- [src/components/public/header.tsx](../../src/components/public/header.tsx): logo, desktop navigation, and reserving CTA.
+- [src/components/public/mobile-nav.tsx](../../src/components/public/mobile-nav.tsx): mobile menu state and navigation.
+- [src/app/page.tsx](../../src/app/page.tsx): hero section and calls to action.
+- [src/content/home.ts](../../src/content/home.ts): hero headline and introduction.
+- [src/app/globals.css](../../src/app/globals.css): focus and shared typography styles.
 
 ### Behavior
 
@@ -63,8 +63,8 @@ Provide clear desktop and mobile navigation, a recognizable property header, and
 
 ## Verification
 
-- Mobile navigation is covered in [src/app/page.test.tsx](../src/app/page.test.tsx).
-- Navigation, overflow, and touch behavior are covered in [e2e/home.spec.ts](../e2e/home.spec.ts).
+- Mobile navigation is covered in [src/app/page.test.tsx](../../src/app/page.test.tsx).
+- Navigation, overflow, and touch behavior are covered in [e2e/home.spec.ts](../../e2e/home.spec.ts).
 
 ## Implementation Notes
 
