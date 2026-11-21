@@ -10,8 +10,8 @@ describe("Home", () => {
     expect(
       screen.getByRole("heading", { name: "Escape para o Campo" }),
     ).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: "Experiência na Fazenda" })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: "Comodidades" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "O Sítio" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Galeria" })).toBeInTheDocument();
     expect(screen.getAllByRole("navigation").length).toBeGreaterThan(0);
   });
 

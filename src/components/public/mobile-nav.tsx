@@ -51,7 +51,7 @@ export function MobileNav() {
             <a
               key={item.href}
               href={item.href}
-              className="block rounded-md px-4 py-3 text-sm text-[#273d4c] hover:bg-stone-100"
+              className="block rounded-md px-4 py-3 text-[15px] font-semibold leading-6 text-[#43513b] hover:bg-stone-100"
               onClick={() => setOpen(false)}
             >
               {item.label}

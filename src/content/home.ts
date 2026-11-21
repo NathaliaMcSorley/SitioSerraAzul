@@ -7,10 +7,10 @@ export const homeContent = {
   brand: "Sítio Serra Azul",
   headline: "Escape para o Campo",
   introduction:
-    "Desfrute de natureza, paisagens tranquilas, churrasco, pescaria e momentos de paz da vida rural.",
+    "O Sítio Serra Azul oferece uma experiência única de lazer e descanso, com acomodações confortáveis, atividades ao ar livre e poucos minutos de distância da cidade.",
   description:
     "Respire ar puro, relaxe em redes, aproveite um churrasco com família e conecte-se com a natureza.",
-  property: "Experiência na Fazenda",
+  property: "Aproveite o sítio, pertinho da cidade",
   propertyDescription:
     "Relaxe por puro, relaxe em rede, aprecie um churrasco com família e conecte-se com a natureza.",
   highlights: [
